@@ -9,7 +9,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="w-full bg-[#F8FAFC] border-t border-gray-200/80 py-12">
+    <footer className="w-full bg-[#F8FAFC] border-t border-gray-200/80 py-8">
       <div className="section-container flex flex-col gap-8">
         
         {/* Main Footer Row */}

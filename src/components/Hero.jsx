@@ -10,7 +10,7 @@ export const Hero = ({ onExploreClick }) => {
     <section
       ref={ref}
       id="hero"
-      className="presentation-section pt-24 sm:pt-32 pb-24 sm:pb-32 bg-white flex items-center justify-center text-center border-b border-gray-100"
+      className="presentation-section pt-16 sm:pt-20 pb-16 sm:pb-20 bg-white flex items-center justify-center text-center border-b border-gray-100"
     >
       <div className="section-container flex flex-col items-center max-w-4xl mx-auto">
         
@@ -42,10 +42,10 @@ export const Hero = ({ onExploreClick }) => {
         </FadeReveal>
 
         {/* Simple CTA */}
-        <FadeReveal active={isInView} delay={1700} className="mt-12 sm:mt-16 mb-4">
+        <FadeReveal active={isInView} delay={1700} className="mt-16 sm:mt-20 lg:mt-24 mb-6">
           <button
             onClick={onExploreClick}
-            className="btn-primary text-sm font-medium py-4 px-9 cursor-pointer flex items-center gap-2.5 transition-all hover:scale-[1.02]"
+            className="btn-primary text-sm font-medium py-4 px-9 cursor-pointer flex items-center gap-2.5 transition-all hover:scale-[1.02] mt-4 sm:mt-6"
           >
             <span>{HERO_DATA.cta}</span>
           </button>

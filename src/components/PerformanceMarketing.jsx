@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { 
-  Sparkles, TrendingUp, CheckCircle2, Award 
+import {
+  Sparkles, TrendingUp, CheckCircle2, Award
 } from 'lucide-react';
 import { useSectionInView, SectionHeadingReveal, FadeReveal, StaggerItem, RevealContainer } from './Typewriter';
 
@@ -28,12 +28,12 @@ export const PerformanceMarketing = () => {
   return (
     <section ref={ref} id="performance-marketing" data-section="performance-marketing" className="presentation-section bg-[#F8F9FB]">
       <div className="section-container flex flex-col gap-10 sm:gap-14 lg:gap-16">
-        
+
         {/* ========================================================================= */}
         {/* 11. PERFORMANCE MARKETING MEETS DEVELOPMENT                               */}
         {/* ========================================================================= */}
         <div className="section-header text-center max-w-4xl mx-auto">
-          
+
           <FadeReveal active={isInView} delay={0} className="flex flex-wrap items-center justify-center gap-3">
             <div className="ecurve-eyebrow reveal-element mb-0">
               <TrendingUp className="w-3.5 h-3.5 text-[#326DED]" />
@@ -63,7 +63,7 @@ export const PerformanceMarketing = () => {
         {/* 12. WEBSITES ACCORDING TO PERFORMANCE MARKETING (Visual Funnel Flow)       */}
         {/* ========================================================================= */}
         <div className="space-y-12">
-          
+
           <div className="text-center max-w-3xl mx-auto flex flex-col gap-2.5">
             <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#326DED]">
               THE COMPLETE FUNNEL
@@ -87,16 +87,14 @@ export const PerformanceMarketing = () => {
                   baseDelay={480}
                   staggerDelay={80}
                   onClick={() => setActiveStep(idx)}
-                  className={`p-5 sm:p-6 rounded-2xl border transition-all duration-300 cursor-pointer text-center flex flex-col justify-between gap-3 interactive-element ${
-                    activeStep === idx
+                  className={`p-5 sm:p-6 rounded-2xl border transition-all duration-300 cursor-pointer text-center flex flex-col justify-between gap-3 interactive-element ${activeStep === idx
                       ? 'bg-[#F0F7FD] border-[#326DED] ring-2 ring-[#326DED]/20 shadow-md scale-[1.02]'
                       : 'bg-white border-gray-200 hover:border-gray-300'
-                  }`}
+                    }`}
                 >
                   <div className="flex flex-col gap-1">
-                    <span className={`text-xs font-mono font-bold block ${
-                      activeStep === idx ? 'text-[#326DED]' : 'text-gray-400'
-                    }`}>
+                    <span className={`text-xs font-mono font-bold block ${activeStep === idx ? 'text-[#326DED]' : 'text-gray-400'
+                      }`}>
                       {step.num}
                     </span>
                     <h4 className="text-base font-extrabold text-[#0A0A0E] font-['Outfit']">

@@ -3,7 +3,9 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ExperienceStorySection from './components/ExperienceStorySection';
 import TechnologiesSection from './components/TechnologiesSection';
+import FourServices from './components/FourServices';
 import TeamSection from './components/TeamSection';
+import TeamMembersSection from './components/TeamMembersSection';
 import RichExperienceTransition from './components/RichExperienceTransition';
 import DevelopmentSection from './components/DevelopmentSection';
 import PerformanceMarketingSection from './components/PerformanceMarketingSection';
@@ -48,8 +50,14 @@ export default function App() {
         {/* SECTION 2: Experience Across Technologies */}
         <TechnologiesSection />
 
+        {/* SECTION 2.5: The Four Core Pillars (Interactive Opening Cards) */}
+        <FourServices />
+
         {/* SECTION 3: A Team Built Differently */}
         <TeamSection />
+
+        {/* SECTION 3.5: Meet Our Team (9 Members) */}
+        <TeamMembersSection />
 
         {/* SECTION 4: Rich Experience. Practical Development. */}
         <RichExperienceTransition />

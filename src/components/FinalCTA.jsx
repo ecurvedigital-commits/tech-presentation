@@ -9,7 +9,7 @@ export const FinalCTA = ({ onOpenModal }) => {
     <section
       ref={ref}
       id="contact"
-      className="presentation-section pt-24 sm:pt-36 pb-24 sm:pb-36 bg-white text-center"
+      className="presentation-section pt-16 sm:pt-20 pb-16 sm:pb-20 bg-white text-center"
     >
       <div className="section-container flex flex-col items-center gap-6 max-w-3xl mx-auto">
         
