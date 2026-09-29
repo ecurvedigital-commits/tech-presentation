@@ -1,0 +1,264 @@
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap";
+@import "tailwindcss";
+
+:root {
+  /* System Spacing Variables */
+  --page-padding: clamp(20px, 5vw, 64px);
+  --section-padding: clamp(80px, 9vw, 130px);
+  --section-gap: clamp(40px, 5vw, 72px);
+  --content-gap: clamp(24px, 3vw, 48px);
+  --element-gap: clamp(16px, 2vw, 28px);
+
+  /* Clean White Palette Tokens */
+  --bg-page: #FFFFFF;
+  --bg-subtle: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --bg-hover: #F1F5F9;
+  
+  --border-light: #E2E8F0;
+  --border-hover: #CBD5E1;
+  --border-accent: #326DED;
+
+  /* Ecurve Brand Color Palette */
+  --ecurve-blue: #326DED;
+  --ecurve-blue-hover: #2155C9;
+  --ecurve-cyan: #00D2FF;
+  --ecurve-dark: #0F172A;
+  --ecurve-green: #10B981;
+  
+  --text-headline: #0F172A;
+  --text-body: #334155;
+  --text-muted: #64748B;
+  
+  --font-display: "Outfit", "Plus Jakarta Sans", sans-serif;
+  --font-sans: "Inter", "Plus Jakarta Sans", sans-serif;
+  --font-mono: "Space Grotesk", monospace;
+
+  /* Card Design System Standard Tokens */
+  --card-radius: 18px;
+  --card-radius-lg: 24px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+  background-color: #FFFFFF;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: var(--text-body);
+  font-family: var(--font-sans);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Master Layout & Spacing System */
+.presentation-section {
+  width: 100%;
+  position: relative;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  border-bottom: 1px solid #F1F5F9;
+  background-color: #FFFFFF;
+}
+
+.section-container {
+  width: min(1200px, calc(100% - clamp(32px, 6vw, 80px)));
+  margin-inline: auto;
+}
+
+@media (max-width: 640px) {
+  .section-container {
+    width: calc(100% - 32px);
+  }
+}
+
+/* ========================================================================= */
+/* GLOBAL CARD DESIGN SYSTEM                                                 */
+/* ========================================================================= */
+.clean-card,
+.card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 24px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  position: relative;
+}
+
+@media (min-width: 640px) {
+  .clean-card,
+  .card {
+    padding: 26px 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .clean-card,
+  .card {
+    padding: 28px 30px;
+  }
+}
+
+.clean-card:hover,
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-hover);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+}
+
+.clean-card-content,
+.card-content {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.clean-card h3,
+.clean-card h4,
+.card h3,
+.card h4 {
+  margin: 0;
+  line-height: 1.35;
+}
+
+.clean-card p,
+.card p {
+  margin: 0;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.clean-card-lg,
+.card-large {
+  padding: 24px;
+}
+
+@media (min-width: 640px) {
+  .clean-card-lg,
+  .card-large {
+    padding: 28px 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .clean-card-lg,
+  .card-large {
+    padding: 32px 36px;
+  }
+}
+
+/* Section Typography */
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--text-headline);
+  letter-spacing: -0.03em;
+  line-height: 1.18;
+}
+
+.section-description {
+  font-family: var(--font-sans);
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* Eyebrow Pill */
+.ecurve-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ecurve-blue);
+  background: #EFF6FF;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  border: 1px solid #DBEAFE;
+  margin-bottom: 1.25rem;
+}
+
+/* Button System */
+.btn-primary {
+  background-color: var(--ecurve-blue);
+  color: #FFFFFF !important;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid var(--ecurve-blue);
+  box-shadow: 0 2px 10px rgba(50, 109, 237, 0.2);
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--ecurve-blue-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(50, 109, 237, 0.3);
+}
+
+.btn-secondary {
+  background-color: #FFFFFF;
+  color: var(--text-headline) !important;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #E2E8F0;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
+  transform: translateY(-1px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E2E8F0;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #CBD5E1;
+}
